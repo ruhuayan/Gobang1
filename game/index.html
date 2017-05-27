@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="www.richyan.com, android, java, php, css, developper,web design,internet game">
+<meta name="description" content="Rich yan is a professional web developper and mobile application developper.">   
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="REVISIT-AFTER" content="1 DAYS">
+<meta name="RATING" content="GENERAL">
+<link rel="icon" href="/ricon.ico" type="image/x-icon">
+<link type="text/css" href="http://www.richyan.com/style.css"  rel="stylesheet" /><script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	<script src="http://www.richyan.com/jquery-3.1.1.min.js"></script><title>GoBang (Five in a row)</title>
+</head>
+<body onload="drawSquare()">
+ <header class="menu">
+            <div class="mContent">
+                <div class="logo"><a href="http://www.richyan.com" class="aLogo">RichYan</a></div>
+                <div class="mItems">|&nbsp;<a href="http://www.richyan.com" class="mLink"> Home </a>&nbsp;|&nbsp;<a href="http://www.richyan.com/portfolio" class="mLink"> Portfolio </a>&nbsp;|&nbsp;<a href="http://www.richyan.com/javascript" class="mLink"> Javascript </a>&nbsp;|&nbsp;
+                    <a href="http://www.richyan.com/java" class="mLink"> Java </a>&nbsp;|&nbsp;<a href="http://www.richyan.com/android" class="mLink"> Android </a>&nbsp;|&nbsp;<a href="http://www.blog.richyan.com/" class="mLink"> Blog </a>&nbsp;|</div>
+            </div>
+ </header>
+
+        <div id="cont" class="content">
+            
+            <div class="conTitle" id="conTitle">Gobang ( Five in a row - multiplayer network game)</div> 
+            <div class="conSubTitle">Connecting to game console... </div>
+ 
+                <canvas id="canvas" height="544" width="544" style='margin-left: 20px;'>Your browser doesn't support Canvas, please use Google Chrome</canvas>
+
+             <div class="conR" style=' width: 220px; float: right; height: 500px; '> 
+					<div class='nameDiv' style="font-weight: bold; border: 1px solid #b6b6b6; width: 95%;"><img class='color' src='images/w.png' alt="White GO" /><span class="playerID" style='margin-left: 5px;'>name</span> </div>
+                    <div class='chatCont' style = "width: 95%; height: 200px; border: 1px solid #b6b6b6;margin-top: 10px; margin-bottom: 10px; overflow-y: scroll;">send msg: </div>
+                    <input type="text" id="chat" value="Message" style ='width: 95%;' autofocus  />
+			</div>
+         </div>     
+        <div class="footer">
+            <div class="fContent">
+                <div class="alink">|<a href="http://www.richyan.com"> Home </a>|<a href="http://www.richyan.com/javascript"> Javascript </a>|
+                    <a href="http://www.richyan.com/java"> Java </a>|<a href="http://www.richyan.com/android"> Android </a>|</div>
+                <div class="copyright">  Copyright @ richyan.com</div>        
+            </div>
+        </div>         <script src="js/gobang.js"></script> 
+    </body>
+</html>
+
