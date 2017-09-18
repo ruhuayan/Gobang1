@@ -2,4 +2,4 @@
 Nodejs Gobang multi-player game
 
 
-to play the game - www.games.richyan.com
+to play the game - http://games.richyan.com
