@@ -5,7 +5,27 @@ var serv = require('http').Server(app);
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/game/index.html');
 }); */
+app.all('*', function(req, res, next) {
+     var origin = req.get('origin'); 
+     res.header('Access-Control-Allow-Origin', origin);
+     res.header("Access-Control-Allow-Headers", "X-Requested-With");
+     res.header('Access-Control-Allow-Headers', 'Content-Type');
+     next();
+});
 app.use('/games/gobang/game', express.static(__dirname + '/game'));
+app.get("/lyrics/:artist/:song", function(req, res){
+    var lyrics = require("./server/lyrics");
+    lyrics.get(req.params.artist, req.params.song, function(result, success){
+        if(success) res.end(JSON.stringify(result));
+    });
+});
+
+app.get("/cover/:album", function(req, res){
+    var cover = require("./server/cover");
+    cover.get(req.params.album, function(result, success){                console.log("cover", result);
+        if(success) res.end(JSON.stringify(result));
+    });
+});
 serv.listen(2000);
 																console.log('Server started');
 var playState = {wait4player:0, join: 1,  start: 2, wait: 3, play: 4, win: 5, left: 6, oneMore: 7};
